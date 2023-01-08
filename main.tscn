@@ -34,16 +34,15 @@ margin_bottom = 505.0
 border_color = Color( 1, 1, 1, 1 )
 border_width = 3.0
 
-[node name="MazeGenerator" type="Node" parent="."]
-script = ExtResource( 2 )
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 50, 50 )
+[node name="KinematicBody2D" type="KinematicBody2D" parent="OuterFrame"]
 script = ExtResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+[node name="Sprite" type="Sprite" parent="OuterFrame/KinematicBody2D"]
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OuterFrame/KinematicBody2D"]
 shape = SubResource( 3 )
+
+[node name="MazeGenerator" type="Node" parent="."]
+script = ExtResource( 2 )

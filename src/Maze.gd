@@ -9,9 +9,9 @@ var grid: Array
 var start_cell: Cell = null
 var end_cell: Cell = null
 
-func _init(number_rows: int, number_columns: int, all_connected: bool = true):
-    self.number_rows = number_rows
-    self.number_columns = number_columns
+func _init(rows: int, columns: int, all_connected: bool = true):
+    self.number_rows = rows
+    self.number_columns = columns
     self.grid = _initialize_cells(all_connected)
 
 func _initialize_cells(all_connected: bool):
